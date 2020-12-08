@@ -47,5 +47,33 @@ max_time_slider.oninput = function(){
 }
 
 
+
+    var myTimer;
+    function clock() {
+        document.getElementById('start-time-btn').style.display = "none";
+        document.getElementById('stop-time-btn').style.display = "inline-block";
+        myTimer = setInterval(myClock, 1000);
+        var c = parseInt(document.getElementById("start-time").value);
+
+        function myClock() {
+            document.getElementById("start-time").value = c++;   
+        }
+    }
+
+    function stopClock() {
+        document.getElementById('start-time-btn').style.display = "inline-block";
+        document.getElementById('stop-time-btn').style.display = "none";
+        clearInterval(myTimer);
+    }
+
+    var autoStartTimer;
+    autoStartTimer = setInterval(autoClock, 1000);
+        var c = parseInt(document.getElementById("auto-start-time").value);
+
+    function autoClock() {
+        document.getElementById("auto-start-time").value = c++;   
+    }
+
+
   
 
