@@ -1,3 +1,21 @@
+.container {
+    width: 80%;
+    height: 200px;  
+    margin: auto;
+    padding: 10px;
+}
+
+.one {
+    width: 20%;
+    height: 200px;  
+    float: left;
+}
+
+.two {
+    margin-left: 15%;
+    height: 200px;
+}
+
 .slider {
     width: 50%;
     margin: 10px;
@@ -21,9 +39,4 @@ input[type=range][orient=vertical]
     width: 8px !important;
     height: 80px !important;
     padding: 0 5px;
-}
-
-#box-2, #box-3 {
-    height: auto !important;
-    width: 50% !important;
 }

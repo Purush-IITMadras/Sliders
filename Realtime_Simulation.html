@@ -1,0 +1,50 @@
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="plotly.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <section class="container">
+            <h1>Real Time Simulation</h1>
+            <div class="one">
+                <div>
+                    <input type="range" orient="vertical" id="time1" name="time1" min="0" max="100" required>
+                    <div>
+                        <label for="time1">Slider A: </label>
+                        <b><input type="number" id="min-time" value="20"></input></b>
+                    </div>
+                </div>
+                <div>
+                    <input type="range" orient="vertical" id="time2" name="time2" min="0" max="100" required>
+                    <div >
+                        <label for="time2">Slider B: </label>
+                        <b><input type="number" id="max-time" value="20"></input></b>
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                    <!-- <input type="range" orient="vertical" id="time3" name="time3" required> -->
+                    <div >
+                        <label for="time3">Slider C: </label>
+                        <b><input type="number" id="total-time" value="40"></input></b>
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                    Time: <input type="number" id="start-time" value="0">
+                    <button id="start-time-btn" is_start="0" onclick="clock()">Start</button>
+                    <button id="stop-time-btn" is_start="1" style="display: none;" onclick="stopClock()">Stop</button>
+
+                    <!-- <button onclick="stopClock()">Test</button> -->
+                </div>
+            </div>
+
+            <div class="wrapper two">
+                <div id="chart"></div>
+            </div>
+        </section>
+        <script src="main.js"></script>
+    </body>
+</html>
