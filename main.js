@@ -85,12 +85,43 @@ function stopClock() {
 
 function getData() {
     return document.getElementById('total-time').value;
-}  
+} 
+
+var layout = {
+    shapes: [
+    {
+        type: 'line',
+        xref: 'paper',
+        x0: 0,
+        y0: 90.0,
+        x1: 1,
+        y1: 90.0,
+        line:{
+            color: 'rgb(255, 0, 0)',
+            width: 4,
+            dash:'dot'
+        }
+    }, 
+    {
+        type: 'line',
+        xref: 'paper',
+        x0: 0,
+        y0: 30.0,
+        x1: 1,
+        y1: 30.0,
+        line:{
+            color: 'rgb(255, 0, 0)',
+            width: 4,
+            dash:'dot'
+        }
+    }
+    ]
+}
 
 Plotly.plot('chart',[{
     y:[getData()],
     type:'line'
-}]);
+}], layout);
 
 var cnt = 0;
 
